@@ -29,3 +29,17 @@ E:\Actual Projects\cs\PicProc\PicProc\PicProc\obj\Debug\netcoreapp3.1\PicHolder.
 E:\Actual Projects\cs\PicProc\PicProc\PicProc\obj\Debug\netcoreapp3.1\PicHolder.baml
 E:\Actual Projects\cs\PicProc\PicProc\PicProc\obj\Debug\netcoreapp3.1\PicItem.g.cs
 E:\Actual Projects\cs\PicProc\PicProc\PicProc\obj\Debug\netcoreapp3.1\PicItem.baml
+E:\Actual Projects\cs\PicProc\PicProc\PicProc\bin\Debug\netcoreapp3.1\Magick.NET-Q16-AnyCPU.dll
+E:\Actual Projects\cs\PicProc\PicProc\PicProc\bin\Debug\netcoreapp3.1\Magick.NET.Core.dll
+E:\Actual Projects\cs\PicProc\PicProc\PicProc\bin\Debug\netcoreapp3.1\runtimes\linux-arm64\native\Magick.Native-Q16-arm64.dll.so
+E:\Actual Projects\cs\PicProc\PicProc\PicProc\bin\Debug\netcoreapp3.1\runtimes\linux-musl-x64\native\Magick.Native-Q16-x64.dll.so
+E:\Actual Projects\cs\PicProc\PicProc\PicProc\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\Magick.Native-Q16-x64.dll.so
+E:\Actual Projects\cs\PicProc\PicProc\PicProc\bin\Debug\netcoreapp3.1\runtimes\osx-x64\native\Magick.Native-Q16-x64.dll.dylib
+E:\Actual Projects\cs\PicProc\PicProc\PicProc\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Magick.Native-Q16-arm64.dll
+E:\Actual Projects\cs\PicProc\PicProc\PicProc\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Magick.Native-Q16-x64.dll
+E:\Actual Projects\cs\PicProc\PicProc\PicProc\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Magick.Native-Q16-x86.dll
+E:\Actual Projects\cs\PicProc\PicProc\PicProc\obj\Debug\netcoreapp3.1\PicProc.csproj.CopyComplete
+E:\Actual Projects\cs\PicProc\PicProc\PicProc\obj\Debug\netcoreapp3.1\ImageControls.g.cs
+E:\Actual Projects\cs\PicProc\PicProc\PicProc\obj\Debug\netcoreapp3.1\ImageControls.baml
+E:\Actual Projects\cs\PicProc\PicProc\PicProc\obj\Debug\netcoreapp3.1\ImagePreview.g.cs
+E:\Actual Projects\cs\PicProc\PicProc\PicProc\obj\Debug\netcoreapp3.1\ImagePreview.baml

@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "TWUXpsSNPDS6Kw0Vh4OsFBuRQ61slfzYoNtJBLI4qDC7pz9yRKYSiZ0Ivnb87KHfpdj7xWsoxiGjMuz8i0lrDQ==",
+  "dgSpecHash": "H0929vjIiOCoUMZv7ktuxwPGDSMMkFFcfO2dx3rtF8YbPQtd60Bu2ZpOaKwBSmxozdmGTwG6VphXI7GnYFnb1w==",
   "success": true,
   "projectFilePath": "E:\\Actual Projects\\cs\\PicProc\\PicProc\\PicProc\\PicProc.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Isaac\\.nuget\\packages\\magick.net-q16-anycpu\\12.1.0\\magick.net-q16-anycpu.12.1.0.nupkg.sha512",
+    "C:\\Users\\Isaac\\.nuget\\packages\\magick.net.core\\12.1.0\\magick.net.core.12.1.0.nupkg.sha512"
+  ],
   "logs": []
 }

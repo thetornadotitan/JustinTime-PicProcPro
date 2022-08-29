@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -42,6 +43,15 @@ namespace PicProc
             InitializeComponent();
             picImg = FindName("PicImg") as Image;
             path = "";
+        }
+
+        private void PicImg_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            if (MainWindow.instance == null) return;
+
+            string name = path.Remove(0, MainWindow.instance.cwd.Length+1);
+
+            MainWindow.instance.PicItemClicked(path, name);
         }
     }
 }

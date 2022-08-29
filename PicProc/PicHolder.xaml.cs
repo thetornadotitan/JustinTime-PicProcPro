@@ -41,7 +41,6 @@ namespace PicProc
 
             List<string> images = new List<string>();
             string pattern = MainWindow.instance.cwd.Replace(@"\", @"\\")+@"\\"+sku;
-            Trace.WriteLine("Pattern: " + pattern);
 
             foreach (string path in Directory.GetFiles(MainWindow.instance.cwd))
             {

@@ -55,11 +55,8 @@ namespace PicProc
 
         }
 
-        public void IngestPath(string path)
+        public void BuildFromCurrentDirectory()
         {
-            if(MainWindow.instance != null)
-                MainWindow.instance.cwd = path;
-
             string[] validFileNames = GetValidFileNames();
             Dictionary<string, int> uniqueFileName = GetUniqueFileNames(validFileNames);
             ProductInfo[] currentProducts = GetProductInfoFromFileNames(uniqueFileName);
@@ -72,7 +69,7 @@ namespace PicProc
 
             if (MainWindow.instance == null) return validFiles.ToArray();
 
-            foreach(String file in Directory.GetFiles(MainWindow.instance.cwd))
+            foreach(string file in Directory.GetFiles(MainWindow.instance.cwd))
             {
                 string result = "";
 

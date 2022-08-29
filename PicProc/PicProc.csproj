@@ -13,6 +13,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Magick.NET-Q16-AnyCPU" Version="12.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="elk-deer-moose-silhouette-clip-art-png-favpng-ALGa4eB8TJ4ETpVCCkmwzK053.png" />
   </ItemGroup>
 

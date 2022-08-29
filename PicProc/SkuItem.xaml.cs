@@ -31,9 +31,6 @@ namespace PicProc
 
         private void UserControl_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            if(skuTB != null)
-                Trace.WriteLine("SKU: " + skuTB.Text + " & Name: " + productName);
-
             if(MainWindow.instance != null && skuTB != null)
                 MainWindow.instance.SkuItemClicked(skuTB.Text, productName);
         }

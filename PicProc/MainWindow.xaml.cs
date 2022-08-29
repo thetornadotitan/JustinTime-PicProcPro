@@ -28,6 +28,7 @@ namespace PicProc
         SkuHolder? holderRef = null;
         PicHolder? picHolderRef = null;
         TextBlock? productTitle = null;
+        ImagePreview? imagePreview = null;
         public MainWindow()
         {
             InitializeComponent();
@@ -35,6 +36,7 @@ namespace PicProc
             holderRef = FindName("SkuHolder") as SkuHolder;
             picHolderRef = FindName("PicHolder") as PicHolder;
             productTitle = FindName("ProductTitle") as TextBlock;
+            imagePreview = FindName("ImagePreview") as ImagePreview;
         }
 
         public void SkuItemClicked(string sku, string name)
@@ -46,7 +48,13 @@ namespace PicProc
                 picHolderRef.BuildImageListFromSku(sku);
         }
 
-        private void SelectFolderBtn_Click(object sender, RoutedEventArgs e)
+        public void PicItemClicked(string path, string name)
+        {
+            if (imagePreview == null) return;
+            imagePreview.UpdateImage(new BitmapImage(new Uri(path)), name);
+        }
+
+        public void SelectFolderBtn_Click()
         {
             FolderBrowserDialog dialog = new FolderBrowserDialog();
             DialogResult result = dialog.ShowDialog();
@@ -54,7 +62,8 @@ namespace PicProc
             {
                 String path = dialog.SelectedPath;
                 if (holderRef == null) return;
-                holderRef.IngestPath(path);
+                cwd = path;
+                holderRef.BuildFromCurrentDirectory();
             }
         }
     }

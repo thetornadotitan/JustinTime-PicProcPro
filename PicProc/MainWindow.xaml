@@ -27,60 +27,8 @@
                     <ColumnDefinition Width="5*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="4*"/>
-                        <RowDefinition Height="4*"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Button Grid.Column="0" Grid.Row="0" x:Name="SelectFolderBtn" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5" Click="SelectFolderBtn_Click">
-                            <Viewbox Grid.Row="0">
-                                <TextBlock TextAlignment="Center" Background="#FFFFA2A2" HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Select"/><LineBreak/><Run Text="Folder"/></TextBlock>
-                            </Viewbox>
-                        </Button>
-                        <Button Grid.Column="1" Grid.Row="0" x:Name="button1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5">
-                            <Viewbox Grid.Row="0">
-                                <TextBlock TextAlignment="Center" Background="#FFFFA2A2" HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Crop"/><LineBreak/><Run Text="Image"/></TextBlock>
-                            </Viewbox>
-                        </Button>
-                        <Button Grid.Column="0" Grid.Row="1" x:Name="button2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5">
-                            <Viewbox Grid.Row="0">
-                                <TextBlock TextAlignment="Center" Background="#FFFFA2A2" HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Rotate"/><LineBreak /><Run Text="Left"/></TextBlock>
-                            </Viewbox>
-                        </Button>
-                        <Button Grid.Column="1" Grid.Row="1" x:Name="button3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5">
-                            <Viewbox Grid.Row="0">
-                                <TextBlock TextAlignment="Center" Background="#FFFFA2A2" HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Rotate"/><LineBreak /><Run Text="Right"/></TextBlock>
-                            </Viewbox>
-                        </Button>
-                        <Button Grid.Column="0" Grid.Row="2" x:Name="button4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5">
-                            <Viewbox Grid.Row="0">
-                                <TextBlock TextAlignment="Center" Background="#FFFFA2A2" HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Set as"/><LineBreak/><Run Text="Main"/></TextBlock>
-                            </Viewbox>
-                        </Button>
-                        <Button Grid.Column="1" Grid.Row="2" x:Name="button5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5">
-                            <Viewbox Grid.Row="0">
-                                <TextBlock TextAlignment="Center" Background="#FFFFA2A2" HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Set As"/><LineBreak/><Run Text="Thumbnail"/></TextBlock>
-                            </Viewbox>
-                        </Button>
-                    </Grid>
-                    <Button Grid.Column="0" Grid.Row="2" x:Name="button6" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5">
-                        <Viewbox Grid.Row="0">
-                            <TextBlock x:Name="textBlock" TextAlignment="Center" Background="#FFFFA2A2" HorizontalAlignment="Center" VerticalAlignment="Center"><Run x:Name="run" Text="Save"/></TextBlock>
-                        </Viewbox>
-                    </Button>
-                </Grid>
-                <Canvas Grid.Column="1" Background="Black"  />
+                <local:ImageControls x:Name="ImageControls"/>
+                <local:ImagePreview x:Name="ImagePreview" Grid.Column="1"/>
             </Grid>
             <local:PicHolder Grid.Row="2" x:Name="PicHolder"/>
         </Grid>

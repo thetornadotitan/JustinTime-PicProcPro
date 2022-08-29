@@ -7,6 +7,12 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="ImageControls.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ImagePreview.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="PicItem.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -21,6 +27,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="ImageControls.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ImagePreview.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
