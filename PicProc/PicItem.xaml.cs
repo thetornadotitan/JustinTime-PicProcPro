@@ -47,11 +47,11 @@ namespace PicProc
 
         private void PicImg_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            if (MainWindow.instance == null) return;
+            if (MainWindow.instance == null || MainWindow.instance.imagePreviewRef == null) return;
+            
+            string name = path.Remove(0, MainWindow.instance.cwd.Length + 1);
 
-            string name = path.Remove(0, MainWindow.instance.cwd.Length+1);
-
-            MainWindow.instance.PicItemClicked(path, name);
+            MainWindow.instance.imagePreviewRef.UpdateImage(new BitmapImage(new Uri(path)), name);
         }
     }
 }

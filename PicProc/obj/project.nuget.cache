@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "H0929vjIiOCoUMZv7ktuxwPGDSMMkFFcfO2dx3rtF8YbPQtd60Bu2ZpOaKwBSmxozdmGTwG6VphXI7GnYFnb1w==",
+  "dgSpecHash": "/BGDmS/JafOmxGmG5P6ZzNZzlcvq3Qmn3bqLJapQIJr0xZR3tJudfCbgGLQHLWmISHbn1g+fbzKEP565oI/MzQ==",
   "success": true,
   "projectFilePath": "E:\\Actual Projects\\cs\\PicProc\\PicProc\\PicProc\\PicProc.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Isaac\\.nuget\\packages\\magick.net-q16-anycpu\\12.1.0\\magick.net-q16-anycpu.12.1.0.nupkg.sha512",
-    "C:\\Users\\Isaac\\.nuget\\packages\\magick.net.core\\12.1.0\\magick.net.core.12.1.0.nupkg.sha512"
+    "C:\\Users\\Isaac\\.nuget\\packages\\magick.net.core\\12.1.0\\magick.net.core.12.1.0.nupkg.sha512",
+    "C:\\Users\\Isaac\\.nuget\\packages\\magick.net.systemdrawing\\6.1.0\\magick.net.systemdrawing.6.1.0.nupkg.sha512",
+    "C:\\Users\\Isaac\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\Isaac\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }

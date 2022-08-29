@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 
 namespace PicProc
 {
@@ -31,8 +32,13 @@ namespace PicProc
 
         private void UserControl_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            if(MainWindow.instance != null && skuTB != null)
-                MainWindow.instance.SkuItemClicked(skuTB.Text, productName);
+            if (MainWindow.instance == null || skuTB == null) return;
+
+            if (MainWindow.instance.productTitleRef != null)
+                MainWindow.instance.productTitleRef.Text = productName;
+
+            if (MainWindow.instance.picHolderRef != null)
+                MainWindow.instance.picHolderRef.BuildImageListFromSku(skuTB.Text);
         }
     }
 }

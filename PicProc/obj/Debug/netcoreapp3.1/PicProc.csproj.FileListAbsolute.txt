@@ -43,3 +43,9 @@ E:\Actual Projects\cs\PicProc\PicProc\PicProc\obj\Debug\netcoreapp3.1\ImageContr
 E:\Actual Projects\cs\PicProc\PicProc\PicProc\obj\Debug\netcoreapp3.1\ImageControls.baml
 E:\Actual Projects\cs\PicProc\PicProc\PicProc\obj\Debug\netcoreapp3.1\ImagePreview.g.cs
 E:\Actual Projects\cs\PicProc\PicProc\PicProc\obj\Debug\netcoreapp3.1\ImagePreview.baml
+E:\Actual Projects\cs\PicProc\PicProc\PicProc\bin\Debug\netcoreapp3.1\Magick.NET.SystemDrawing.dll
+E:\Actual Projects\cs\PicProc\PicProc\PicProc\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+E:\Actual Projects\cs\PicProc\PicProc\PicProc\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+E:\Actual Projects\cs\PicProc\PicProc\PicProc\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+E:\Actual Projects\cs\PicProc\PicProc\PicProc\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.1\System.Drawing.Common.dll
+E:\Actual Projects\cs\PicProc\PicProc\PicProc\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Drawing.Common.dll

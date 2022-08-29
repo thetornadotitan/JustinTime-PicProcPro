@@ -31,7 +31,7 @@
                     <TextBlock TextAlignment="Center" Background="#FFFFA2A2" HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Crop"/><LineBreak/><Run Text="Image"/></TextBlock>
                 </Viewbox>
             </Button>
-            <Button Grid.Column="0" Grid.Row="1" x:Name="RotateLBtn" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5">
+            <Button Grid.Column="0" Grid.Row="1" x:Name="RotateLBtn" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5" Click="RotateLBtn_Click">
                 <Viewbox Grid.Row="0">
                     <TextBlock TextAlignment="Center" Background="#FFFFA2A2" HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Rotate"/><LineBreak /><Run Text="Left"/></TextBlock>
                 </Viewbox>

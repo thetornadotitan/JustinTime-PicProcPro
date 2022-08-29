@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -30,6 +31,18 @@ namespace PicProc
 
             previewImage.Source = img;
             imageName.Text = name;
+        }
+
+        public byte[] GetImage()
+        {
+            if (previewImage == null || previewImage.Source == null) return new byte[0];
+
+            MemoryStream memStream = new MemoryStream();
+            JpegBitmapEncoder encoder = new JpegBitmapEncoder();
+            encoder.QualityLevel = 100;
+            encoder.Frames.Add(BitmapFrame.Create(previewImage.Source as BitmapImage));
+            encoder.Save(memStream);
+            return memStream.ToArray();
         }
     }
 }

@@ -23,48 +23,21 @@ namespace PicProc
     public partial class MainWindow : Window
     {
         public static MainWindow? instance;
+
         public string cwd = "";
 
-        SkuHolder? holderRef = null;
-        PicHolder? picHolderRef = null;
-        TextBlock? productTitle = null;
-        ImagePreview? imagePreview = null;
+        public SkuHolder? holderRef = null;
+        public PicHolder? picHolderRef = null;
+        public TextBlock? productTitleRef = null;
+        public ImagePreview? imagePreviewRef = null;
         public MainWindow()
         {
             InitializeComponent();
             instance = this;
             holderRef = FindName("SkuHolder") as SkuHolder;
             picHolderRef = FindName("PicHolder") as PicHolder;
-            productTitle = FindName("ProductTitle") as TextBlock;
-            imagePreview = FindName("ImagePreview") as ImagePreview;
-        }
-
-        public void SkuItemClicked(string sku, string name)
-        {
-            if(productTitle != null)
-                productTitle.Text = name;
-
-            if (picHolderRef != null)
-                picHolderRef.BuildImageListFromSku(sku);
-        }
-
-        public void PicItemClicked(string path, string name)
-        {
-            if (imagePreview == null) return;
-            imagePreview.UpdateImage(new BitmapImage(new Uri(path)), name);
-        }
-
-        public void SelectFolderBtn_Click()
-        {
-            FolderBrowserDialog dialog = new FolderBrowserDialog();
-            DialogResult result = dialog.ShowDialog();
-            if(result == System.Windows.Forms.DialogResult.OK)
-            {
-                String path = dialog.SelectedPath;
-                if (holderRef == null) return;
-                cwd = path;
-                holderRef.BuildFromCurrentDirectory();
-            }
+            productTitleRef = FindName("ProductTitle") as TextBlock;
+            imagePreviewRef = FindName("ImagePreview") as ImagePreview;
         }
     }
 }
