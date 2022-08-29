@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="PicProc.SkuHolder"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PicProc"
+             mc:Ignorable="d">
+    <ListBox ScrollViewer.HorizontalScrollBarVisibility="Disabled" x:Name="ListBox" Background="#FFF0FFBB">
+        <ListBox.ItemContainerStyle>
+            <Style TargetType="ListBoxItem">
+                <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
+                <Setter Property="VerticalContentAlignment" Value="Stretch"></Setter>
+            </Style>
+        </ListBox.ItemContainerStyle>
+        <Viewbox>
+            <TextBlock Text="12345678"/>
+        </Viewbox>
+        <Viewbox>
+            <TextBlock Text="123456"/>
+        </Viewbox>
+        <Viewbox>
+            <TextBlock Text="12345678910"/>
+        </Viewbox>
+        <Viewbox>
+            <TextBlock Text="TestItem"/>
+        </Viewbox>
+        <Viewbox>
+            <TextBlock Text="TestItemzxcvzx"/>
+        </Viewbox>
+    </ListBox>
+</UserControl>

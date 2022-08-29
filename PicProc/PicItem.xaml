@@ -1,0 +1,11 @@
+﻿<UserControl x:Class="PicProc.PicItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PicProc"
+             mc:Ignorable="d" >
+    <Border BorderBrush="Black" BorderThickness="1">
+        <Image x:Name="PicImg" Width="{Binding Height, RelativeSource={RelativeSource Self}}" Source="/elk-deer-moose-silhouette-clip-art-png-favpng-ALGa4eB8TJ4ETpVCCkmwzK053.png"/>
+    </Border>
+</UserControl>
