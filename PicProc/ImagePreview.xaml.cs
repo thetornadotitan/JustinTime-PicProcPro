@@ -30,7 +30,17 @@ namespace PicProc
             if (previewImage == null || imageName == null) return;
 
             previewImage.Source = img;
-            imageName.Text = name;
+
+            if(name !=null)
+                imageName.Text = name;
+        }
+
+        public string GetCurrentImameName()
+        {
+            if(imageName != null)
+                return imageName.Text;
+
+            return "";
         }
 
         public byte[] GetImage()
@@ -38,8 +48,7 @@ namespace PicProc
             if (previewImage == null || previewImage.Source == null) return new byte[0];
 
             MemoryStream memStream = new MemoryStream();
-            JpegBitmapEncoder encoder = new JpegBitmapEncoder();
-            encoder.QualityLevel = 100;
+            PngBitmapEncoder encoder = new PngBitmapEncoder();
             encoder.Frames.Add(BitmapFrame.Create(previewImage.Source as BitmapImage));
             encoder.Save(memStream);
             return memStream.ToArray();

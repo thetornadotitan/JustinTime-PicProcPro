@@ -31,23 +31,19 @@ namespace PicProc
 
             FolderBrowserDialog dialog = new FolderBrowserDialog();
             DialogResult result = dialog.ShowDialog();
-            if (result == System.Windows.Forms.DialogResult.OK)
+            if (result == DialogResult.OK)
             {
                 String path = dialog.SelectedPath;
                 MainWindow.instance.cwd = path;
                 MainWindow.instance.holderRef.BuildFromCurrentDirectory();
             }
         }
-        private void RotateLBtn_Click(object sender, RoutedEventArgs e)
-        {
-            if (MainWindow.instance == null || MainWindow.instance.ImagePreview == null) return;
 
-            MagickImage m = new MagickImage(MainWindow.instance.ImagePreview.GetImage());
-            m.Rotate(-90);
+        private BitmapImage GetBitMapFromMagickImage(MagickImage m)
+        {
             BitmapSource? bitmap = new ImageSourceConverter().ConvertFrom(m.ToByteArray()) as BitmapSource;
 
-            JpegBitmapEncoder encoder = new JpegBitmapEncoder();
-            encoder.QualityLevel = 100;
+            BitmapEncoder encoder = new PngBitmapEncoder();
             MemoryStream memorystream = new MemoryStream();
             BitmapImage tmpImage = new BitmapImage();
             encoder.Frames.Add(BitmapFrame.Create(bitmap));
@@ -59,7 +55,47 @@ namespace PicProc
 
             memorystream.Close();
 
-            MainWindow.instance.ImagePreview.UpdateImage(tmpImage, "Rotated");
+            return tmpImage;
+        }
+
+        private void RotateLBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (MainWindow.instance == null || MainWindow.instance.ImagePreview == null) return;
+
+            MagickImage m = new MagickImage(MainWindow.instance.ImagePreview.GetImage());
+            m.Rotate(-90);
+
+            MainWindow.instance.ImagePreview.UpdateImage(GetBitMapFromMagickImage(m), MainWindow.instance.ImagePreview.GetCurrentImameName());
+        }
+
+        private void RotateRBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (MainWindow.instance == null || MainWindow.instance.ImagePreview == null) return;
+
+            MagickImage m = new MagickImage(MainWindow.instance.ImagePreview.GetImage());
+            m.Rotate(90);
+
+            MainWindow.instance.ImagePreview.UpdateImage(GetBitMapFromMagickImage(m), MainWindow.instance.ImagePreview.GetCurrentImameName());
+        }
+
+        private void FlipHorizontalBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (MainWindow.instance == null || MainWindow.instance.ImagePreview == null) return;
+
+            MagickImage m = new MagickImage(MainWindow.instance.ImagePreview.GetImage());
+            m.Flop();
+
+            MainWindow.instance.ImagePreview.UpdateImage(GetBitMapFromMagickImage(m), MainWindow.instance.ImagePreview.GetCurrentImameName());
+        }
+
+        private void FlipVerticalBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (MainWindow.instance == null || MainWindow.instance.ImagePreview == null) return;
+
+            MagickImage m = new MagickImage(MainWindow.instance.ImagePreview.GetImage());
+            m.Flip();
+
+            MainWindow.instance.ImagePreview.UpdateImage(GetBitMapFromMagickImage(m), MainWindow.instance.ImagePreview.GetCurrentImameName());
         }
     }
 }
